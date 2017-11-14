@@ -16,13 +16,15 @@ Then("I should see the facebook title is displayed") do
 end
 
 Given("I am in the facebook homepage") do
-
+puts"already in the homepage"
 end
 
 Then("I should see sign in text box are displayed") do
-
+  if $driver.title.include?("email")
+    puts " found in the text box"
 end
 
 Then("I should see sign in buttom are displayed") do
-
+  if $driver.title.include?("Log In")
+    puts "found Log In buttom "
 end
