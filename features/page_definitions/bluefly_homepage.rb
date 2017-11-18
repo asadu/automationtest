@@ -31,7 +31,10 @@ Then("I see Dropdown the menu from {string} option") do |string|
  if $driver.find_element(link: string).displayed?
    puts "#{string} STEP PASS"
  else
-   puts "#{string} STEP FAIL"
+   # $driver.save_screenshot('screenshot.png')
+   # puts "#{string} STEP FAIL"
+   $driver.save_screenshot('~/Desktop/screenshot1.png', '')
+
  end
 end
 
